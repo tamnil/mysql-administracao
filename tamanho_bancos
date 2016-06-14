@@ -1,0 +1,2 @@
+## Retorna o tamanho dos bancos de dados.
+SELECT table_schema AS "Banco", SUM(data_length + index_length) / 1024 / 1024 AS "Tamanho (MB)" FROM information_schema.TABLES GROUP BY table_schema;
